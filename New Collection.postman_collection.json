@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "4d055b78-8638-4663-88dd-257b3ab9d4f7",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13598113"
+	},
+	"item": [
+		{
+			"name": "Get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/customers/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/customers/0e501854-7ce0-4beb-b161-d60f20bebd08",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"customers",
+						"0e501854-7ce0-4beb-b161-d60f20bebd08"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"string\",\n  \"email\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/customers/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer_id\": \"string\",\n  \"status\": \"Draft\",\n  \"order_items\": [\n    {\n      \"product_name\": \"string\",\n      \"quantity\": 0,\n      \"price\": 0\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/orders/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get order by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/bf56d9ab-667a-46f9-b08e-4610d08df15d",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"bf56d9ab-667a-46f9-b08e-4610d08df15d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer 's total spend by their id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/customer/0e501854-7ce0-4beb-b161-d60f20bebd08/total_spend",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"customer",
+						"0e501854-7ce0-4beb-b161-d60f20bebd08",
+						"total_spend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/orders/c86c8778-3899-4e52-8131-8c8ba6b0a9e5/status?new_status=Confirmed",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/orders/c86c8778-3899-4e52-8131-8c8ba6b0a9e5/status?new_status=Confirmed",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"c86c8778-3899-4e52-8131-8c8ba6b0a9e5",
+						"status"
+					],
+					"query": [
+						{
+							"key": "new_status",
+							"value": "Confirmed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

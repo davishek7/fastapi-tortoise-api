@@ -1,0 +1,4 @@
+uv run aerich init -t app.configs.db.TORTOISE_ORM
+uv run aerich init-db
+uv run aerich migrate
+uv run aerich upgrade

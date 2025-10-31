@@ -1,0 +1,20 @@
+[project]
+name = "internship-assignment-avishek-das"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aerich>=0.9.2",
+    "fastapi>=0.120.2",
+    "pydantic-settings>=2.11.0",
+    "pydantic[email]>=2.12.3",
+    "tomlkit>=0.13.3",
+    "tortoise-orm>=0.25.1",
+    "uvicorn>=0.38.0",
+]
+
+[tool.aerich]
+tortoise_orm = "app.configs.db.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
