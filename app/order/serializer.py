@@ -1,7 +1,8 @@
 from .schemas import OrderOut
 
+
 def serialize_order(order):
-    serialized_order =  {
+    serialized_order = {
         "id": str(order.id),
         "customer_id": str(order.customer_id),
         "date": order.date.isoformat(),
